@@ -1,2 +1,5 @@
-# les15
-Продвинутые приемы работы с http-запросами, полезные модули от сообщества разработчиков и подготовка к Angular2
+# netology-angular-pokemons
+Demo files for Netology Node, Angular, MongoDB Course. Lesson 2
+
+1. npm install
+2. gulp webserver

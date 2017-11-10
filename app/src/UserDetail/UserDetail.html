@@ -1,0 +1,29 @@
+<div ng-if="!userLoaded">
+   <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+</div>
+
+<div class="alert alert-danger" role="alert" ng-if="notfoundError">Пользователь не найден</div>
+
+<md-tabs active="activeTab">
+
+    <md-tab label="Инфо"> <!-- ng-disabled="disableControlTab" -->
+        <md-tab-body>
+            <h1>{{user.username | uppercase }}</h1>
+            <p>{{user.name}}</p
+        ></md-tab-body>
+    </md-tab>
+
+    <md-tab label="Операции">
+            
+        <md-button class="md-warn" ng-click="deleteUser(user.id)">
+            Удалить
+        </md-button>
+        <md-button class="md-primary" href="#!/edit/{{user.id}}">
+            Редактировать
+        </md-button>
+
+    </md-tab>
+</md-tabs>
+
+<div class="alert alert-success" role="alert" ng-if="deletionSuccess">Пока, пользователь!</div>
+<div class="alert alert-danger" role="alert" ng-if="deletionError">Пользователи не сдаются!</div>
